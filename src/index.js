@@ -219,35 +219,39 @@ const wanderermaps = [
   "/Game/Schematics/Levels/MainQuests/Lincoln_Assault_Story_01.Lincoln_Assault_Story_01" // join or die
 ] // s2 missions might work but i wont add them for compatibility with old versions + its how it was left as on the playfab end
 
-const wandereritems = [
-  [
-    {
-      Asset: "SBZWeaponData'/Game/Schematics/Weapons/PlayerWeapons/AssaultRifles/CZ805/DWP_CZ805.DWP_CZ805'"
-    },
-    {
-      Asset: "SBZWeaponData'/Game/Schematics/Weapons/PlayerWeapons/Pistols/1911/DWP_1911.DWP_1911'"
-    },
-    {
-      Asset: "SBZWeaponPartSchematic'/Game/Schematics/WeaponParts/Attachments/Gadgets/AssaultLight/SCH_Attachment_Gadget_AssaultLight.SCH_Attachment_Gadget_AssaultLight'"
-    }
-  ],
-  [
-    {
-      Asset: "SBZWeaponData'/Game/Schematics/Weapons/PlayerWeapons/AssaultRifles/G36/DWP_G36.DWP_G36'"
-    },
-    {
-      Asset: "SBZWeaponData'/Game/Schematics/Weapons/PlayerWeapons/Revolvers/ColtDetective/DWP_ColtDetective.DWP_ColtDetective'"
-    },
-    {
-      Asset: "SBZWeaponPartSchematic'/Game/Schematics/WeaponParts/Attachments/Gadgets/LEDCombo/SCH_Attachment_Gadget_LEDCombo.SCH_Attachment_Gadget_LEDCombo'"
-    }
-  ]
-] // gonna be lazy and just do arrays instead of completely random (afaik dlc weapons dont generate)
+const wandererweapons = [
+  "SBZWeaponData'/Game/Schematics/Weapons/PlayerWeapons/AssaultRifles/CZ805/DWP_CZ805.DWP_CZ805'",
+  "SBZWeaponData'/Game/Schematics/Weapons/PlayerWeapons/Pistols/1911/DWP_1911.DWP_1911'",
+  "SBZWeaponData'/Game/Schematics/Weapons/PlayerWeapons/AssaultRifles/G36/DWP_G36.DWP_G36'",
+  "SBZWeaponData'/Game/Schematics/Weapons/PlayerWeapons/Revolvers/ColtDetective/DWP_ColtDetective.DWP_ColtDetective'"
+]
+
+const wandererattachments = [
+  "SBZWeaponPartSchematic'/Game/Schematics/WeaponParts/Attachments/Gadgets/AssaultLight/SCH_Attachment_Gadget_AssaultLight.SCH_Attachment_Gadget_AssaultLight'",
+  "SBZWeaponPartSchematic'/Game/Schematics/WeaponParts/Attachments/Gadgets/LEDCombo/SCH_Attachment_Gadget_LEDCombo.SCH_Attachment_Gadget_LEDCombo'",
+  "SBZWeaponPartSchematic'/Game/Schematics/WeaponParts/Attachments/Gadgets/AssaultLight/SCH_Attachment_Gadget_AssaultLight.SCH_Attachment_Gadget_AssaultLight'"
+]
+// this is probably the worst way to do it but i dont care xd
+function GetWeeklyNPCItems(rng) {
+  var itemslist = [];
+  var weaponslist = wandererweapons;
+  var attachmentslist = wandererattachments;
+
+  for (index = 0; index <= 2; index++) {
+    var selectedarray = index == 2 ? attachmentslist : weaponslist;
+    var selectedindex = rand_min_max(rng, 0, selectedarray.length - 1);
+    var selecteditem = selectedarray[selectedindex];
+    var arrayitem = {Asset: selecteditem};
+    itemslist.push(arrayitem);
+    selectedarray.splice(selectedindex, 1);
+  }
+  return itemslist;
+}
+
 
 function GetWeeklyNPC(res, player) {
   var rng = get_weekly_rand();
   var selectedwanderermap = wanderermaps[rand_min_max(rng, 0, wanderermaps.length - 1)];
-  var selectedwandereritems = wandereritems[rand_min_max(rng, 0, wandereritems.length - 1)];
   var wanderer_data = {
         timeLeft: 10000000,
         status: "InProgress", // "InProgress", "Expired", "Completed"
@@ -256,7 +260,7 @@ function GetWeeklyNPC(res, player) {
             Map: {
                 Asset: `SBZLevelSchematic'${selectedwanderermap}'`,
             },
-            Inventory: selectedwandereritems
+            Inventory: GetWeeklyNPCItems(rng)
         }
     };
     send_playfab_cloudscript_response(res, "GetWeeklyNPC", true, wanderer_data);
