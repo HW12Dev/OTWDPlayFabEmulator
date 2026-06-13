@@ -220,16 +220,133 @@ const wanderermaps = [
 ] // s2 missions might work but i wont add them for compatibility with old versions + its how it was left as on the playfab end
 
 const wandererweapons = [
+  // assault rifle
   "SBZWeaponData'/Game/Schematics/Weapons/PlayerWeapons/AssaultRifles/CZ805/DWP_CZ805.DWP_CZ805'",
-  "SBZWeaponData'/Game/Schematics/Weapons/PlayerWeapons/Pistols/1911/DWP_1911.DWP_1911'",
+  "SBZWeaponData'/Game/Schematics/Weapons/PlayerWeapons/AssaultRifles/AKM/DWP_AKM.DWP_AKM'",
   "SBZWeaponData'/Game/Schematics/Weapons/PlayerWeapons/AssaultRifles/G36/DWP_G36.DWP_G36'",
-  "SBZWeaponData'/Game/Schematics/Weapons/PlayerWeapons/Revolvers/ColtDetective/DWP_ColtDetective.DWP_ColtDetective'"
+  "SBZWeaponData'/Game/Schematics/Weapons/PlayerWeapons/AssaultRifles/M4A1/DWP_M4A1.DWP_M4A1'",
+  "SBZWeaponData'/Game/Schematics/Weapons/PlayerWeapons/AssaultRifles/SCAR/DWP_SCAR.DWP_SCAR'",
+  // crossbow
+  "SBZWeaponData'/Game/Schematics/Weapons/PlayerWeapons/Crossbows/Barnett/DWP_Barnett.DWP_Barnett'",
+  "SBZWeaponData'/Game/Schematics/Weapons/PlayerWeapons/Crossbows/Hercules/DWP_Hercules.DWP_Hercules'",
+  "SBZWeaponData'/Game/Schematics/Weapons/PlayerWeapons/Crossbows/Rogue/DWP_Rogue.DWP_Rogue'",
+  "SBZWeaponData'/Game/Schematics/Weapons/PlayerWeapons/Crossbows/Solid/DWP_Solid.DWP_Solid'",
+  "SBZWeaponData'/Game/Schematics/Weapons/PlayerWeapons/Crossbows/TurboGT/DWP_TurboGT.DWP_TurboGT'",
+  
+  // melee
+  "SBZWeaponData'/Game/Schematics/Weapons/PlayerWeapons/Melee/BaseballBat/DWP_BaseballBat.DWP_BaseballBat'",
+  "SBZWeaponData'/Game/Schematics/Weapons/PlayerWeapons/Melee/BaseballBat/Bat_Common/DWP_BaseballBat_Common.DWP_BaseballBat_Common'",
+  "SBZWeaponData'/Game/Schematics/Weapons/PlayerWeapons/Melee/BaseballBat/Bat_Epic/DWP_BaseballBat_Epic.DWP_BaseballBat_Epic'",
+  "SBZWeaponData'/Game/Schematics/Weapons/PlayerWeapons/Melee/FireAxe/DWP_Fireaxe2.DWP_Fireaxe2'",
+  "SBZWeaponData'/Game/Schematics/Weapons/PlayerWeapons/Melee/FireAxe/Axe_Common/DWP_Fireaxe_Common.DWP_Fireaxe_Common'",
+  "SBZWeaponData'/Game/Schematics/Weapons/PlayerWeapons/Melee/FireAxe/Final_Fireaxe/DWP_Fireaxe.DWP_Fireaxe'",
+  "SBZWeaponData'/Game/Schematics/Weapons/PlayerWeapons/Melee/Machete/DWP_Machete.DWP_Machete'",
+  "SBZWeaponData'/Game/Schematics/Weapons/PlayerWeapons/Melee/Machete/Machete_3/DWP_Machete3.DWP_Machete3'",
+  "SBZWeaponData'/Game/Schematics/Weapons/PlayerWeapons/Melee/Machete/Machete_Common/DWP_Machete_Common.DWP_Machete_Common'",
+  "SBZWeaponData'/Game/Schematics/Weapons/PlayerWeapons/Melee/Pickaxe/DWP_Pickaxe.DWP_Pickaxe'",
+  "SBZWeaponData'/Game/Schematics/Weapons/PlayerWeapons/Melee/Pickaxe/Epic_Rarity/DWP_Pickaxe_Epic.DWP_Pickaxe_Epic'",
+  "SBZWeaponData'/Game/Schematics/Weapons/PlayerWeapons/Melee/Pickaxe/Pickaxe_Rare/DWP_Pickaxe_Rare.DWP_Pickaxe_Rare'",
+  "SBZWeaponData'/Game/Schematics/Weapons/PlayerWeapons/Melee/Quarterstaff/DWP_Staff.DWP_Staff'",
+  "SBZWeaponData'/Game/Schematics/Weapons/PlayerWeapons/Melee/Quarterstaff/Staff_Epic/DWP_Staff_Epic.DWP_Staff_Epic'",
+  "SBZWeaponData'/Game/Schematics/Weapons/PlayerWeapons/Melee/Quarterstaff/Staff_Rare/DWP_Staff_Rare.DWP_Staff_Rare'",
+  // pistol
+  "SBZWeaponData'/Game/Schematics/Weapons/PlayerWeapons/Pistols/1911/DWP_1911.DWP_1911'",
+  "SBZWeaponData'/Game/Schematics/Weapons/PlayerWeapons/Pistols/DesertEagle/DWP_DesertEagle.DWP_DesertEagle'",
+  "SBZWeaponData'/Game/Schematics/Weapons/PlayerWeapons/Pistols/Glock17/DWP_Glock17.DWP_Glock17'",
+  "SBZWeaponData'/Game/Schematics/Weapons/PlayerWeapons/Pistols/M92FS/DWP_M92FS.DWP_M92FS'",
+  "SBZWeaponData'/Game/Schematics/Weapons/PlayerWeapons/Pistols/P226/DWP_P226.DWP_P226'",
+  // revolver
+  "SBZWeaponData'/Game/Schematics/Weapons/PlayerWeapons/Revolvers/ColtDetective/DWP_ColtDetective.DWP_ColtDetective'",
+  "SBZWeaponData'/Game/Schematics/Weapons/PlayerWeapons/Revolvers/ColtPython/DWP_ColtPython.DWP_ColtPython'",
+  "SBZWeaponData'/Game/Schematics/Weapons/PlayerWeapons/Revolvers/R8/DWP_R8.DWP_R8'",
+  "SBZWeaponData'/Game/Schematics/Weapons/PlayerWeapons/Revolvers/RagingBull/DWP_RagingBull.DWP_RagingBull'",
+  "SBZWeaponData'/Game/Schematics/Weapons/PlayerWeapons/Revolvers/SW29/DWP_SW29.DWP_SW29'",
+  // shotgun
+  "SBZWeaponData'/Game/Schematics/Weapons/PlayerWeapons/Shotguns/Andersson/DWP_Anderson.DWP_Anderson'",
+  "SBZWeaponData'/Game/Schematics/Weapons/PlayerWeapons/Shotguns/M37/DWP_M37.DWP_M37'",
+  "SBZWeaponData'/Game/Schematics/Weapons/PlayerWeapons/Shotguns/R870/DWP_R870.DWP_R870'",
+  "SBZWeaponData'/Game/Schematics/Weapons/PlayerWeapons/Shotguns/Redhead/DWP_Redhead.DWP_Redhead'",
+  "SBZWeaponData'/Game/Schematics/Weapons/PlayerWeapons/Shotguns/SPAS12/DWP_SPAS12.DWP_SPAS12'",
+  // smg
+  "SBZWeaponData'/Game/Schematics/Weapons/PlayerWeapons/Smgs/K23/DWP_K23.DWP_K23'",
+  "SBZWeaponData'/Game/Schematics/Weapons/PlayerWeapons/Smgs/Mac10/DWP_Mac10.DWP_Mac10'",
+  "SBZWeaponData'/Game/Schematics/Weapons/PlayerWeapons/Smgs/MP5/DWP_MP5.DWP_MP5'",
+  "SBZWeaponData'/Game/Schematics/Weapons/PlayerWeapons/Smgs/Scorpion/DWP_Scorpion.DWP_Scorpion'",
+  "SBZWeaponData'/Game/Schematics/Weapons/PlayerWeapons/Smgs/Tec9/DWP_Tec9.DWP_Tec9'",
+  "SBZWeaponData'/Game/Schematics/Weapons/PlayerWeapons/Smgs/UMP45/DWP_UMP45.DWP_UMP45'",
+  // sniper
+  "SBZWeaponData'/Game/Schematics/Weapons/PlayerWeapons/Snipers/AWM/DWP_AWM.DWP_AWM'",
+  "SBZWeaponData'/Game/Schematics/Weapons/PlayerWeapons/Snipers/M14/DWP_M14.DWP_M14'",
+  "SBZWeaponData'/Game/Schematics/Weapons/PlayerWeapons/Snipers/Model70/DWP_Model70.DWP_Model70'",
+  "SBZWeaponData'/Game/Schematics/Weapons/PlayerWeapons/Snipers/Mosin/DWP_Mosin.DWP_Mosin'",
+  "SBZWeaponData'/Game/Schematics/Weapons/PlayerWeapons/Snipers/SVD/DWP_SVD.DWP_SVD'"
 ]
 
 const wandererattachments = [
+  // barrel extensions
+  "SBZWeaponPartSchematic'/Game/Schematics/WeaponParts/Attachments/BarrelExtensions/Compensators/Competitors/SCH_BarrelExt_Compensator_Competitors.SCH_BarrelExt_Compensator_Competitors'",
+  "SBZWeaponPartSchematic'/Game/Schematics/WeaponParts/Attachments/BarrelExtensions/Compensators/EWK/SCH_BarrelExt_Compensator_EWK.SCH_BarrelExt_Compensator_EWK'",
+  "SBZWeaponPartSchematic'/Game/Schematics/WeaponParts/Attachments/BarrelExtensions/Compensators/Facepunch/SCH_BarrelExt_Compensator_Facepunch.SCH_BarrelExt_Compensator_Facepunch'",
+  "SBZWeaponPartSchematic'/Game/Schematics/WeaponParts/Attachments/BarrelExtensions/Compensators/FunnelOfFun/SCH_BarrelExt_Compensator_FunnelOfFun.SCH_BarrelExt_Compensator_FunnelOfFun'",
+  "SBZWeaponPartSchematic'/Game/Schematics/WeaponParts/Attachments/BarrelExtensions/Compensators/IPSC/SCH_BarrelExt_Compensator_IPSC.SCH_BarrelExt_Compensator_IPSC'",
+  "SBZWeaponPartSchematic'/Game/Schematics/WeaponParts/Attachments/BarrelExtensions/Compensators/KingsCrown/SCH_BarrelExt_Compensator_KingsCrown.SCH_BarrelExt_Compensator_KingsCrown'",
+  "SBZWeaponPartSchematic'/Game/Schematics/WeaponParts/Attachments/BarrelExtensions/Compensators/SharkTeeth/SCH_BarrelExt_Compensator_SharkTeeth.SCH_BarrelExt_Compensator_SharkTeeth'",
+  "SBZWeaponPartSchematic'/Game/Schematics/WeaponParts/Attachments/BarrelExtensions/Compensators/Tactical/SCH_BarrelExt_Compensator_Tactical.SCH_BarrelExt_Compensator_Tactical'",
+  "SBZWeaponPartSchematic'/Game/Schematics/WeaponParts/Attachments/BarrelExtensions/FlashHiders/PistolFlashHider/SCH_BarrelExt_FlashHider_Pistol.SCH_BarrelExt_FlashHider_Pistol'",
+  "SBZWeaponPartSchematic'/Game/Schematics/WeaponParts/Attachments/BarrelExtensions/Suppressors/Aurora/SCH_BarrelExtension_Suppressor_Aurora.SCH_BarrelExtension_Suppressor_Aurora'",
+  "SBZWeaponPartSchematic'/Game/Schematics/WeaponParts/Attachments/BarrelExtensions/Suppressors/Hush/SCH_BarrelExtension_Suppressor_Hush.SCH_BarrelExtension_Suppressor_Hush'",
+  "SBZWeaponPartSchematic'/Game/Schematics/WeaponParts/Attachments/BarrelExtensions/Suppressors/LowProfile/SCH_BarrelExtension_Suppressor_LowProfile.SCH_BarrelExtension_Suppressor_LowProfile'",
+  "SBZWeaponPartSchematic'/Game/Schematics/WeaponParts/Attachments/BarrelExtensions/Suppressors/Monolith/SCH_BarrelExtension_Suppressor_Monolith.SCH_BarrelExtension_Suppressor_Monolith'",
+  "SBZWeaponPartSchematic'/Game/Schematics/WeaponParts/Attachments/BarrelExtensions/Suppressors/Sandman/SCH_BarrelExtension_Suppressor_Sandman.SCH_BarrelExtension_Suppressor_Sandman'",
+  "SBZWeaponPartSchematic'/Game/Schematics/WeaponParts/Attachments/BarrelExtensions/Suppressors/ShhSuppressor/SCH_BarrelExtension_Suppressor_Shh.SCH_BarrelExtension_Suppressor_Shh'",
+  "SBZWeaponPartSchematic'/Game/Schematics/WeaponParts/Attachments/BarrelExtensions/Suppressors/SilentKiller/SCH_BarrelExtension_Suppressor_SilentKiller.SCH_BarrelExtension_Suppressor_SilentKiller'",
+  "SBZWeaponPartSchematic'/Game/Schematics/WeaponParts/Attachments/BarrelExtensions/Suppressors/StandardIssue/SCH_BarrelExtension_Suppressor_StandardIssue.SCH_BarrelExtension_Suppressor_StandardIssue'",
+  "SBZWeaponPartSchematic'/Game/Schematics/WeaponParts/Attachments/BarrelExtensions/Suppressors/TheBiggerTheBetter/SCH_BarrelExtension_Suppressor_TheBiggerTheBetter.SCH_BarrelExtension_Suppressor_TheBiggerTheBetter'",
+  "SBZWeaponPartSchematic'/Game/Schematics/WeaponParts/Attachments/BarrelExtensions/Suppressors/Turbo/SCH_BarrelExtension_Suppressor_Turbo.SCH_BarrelExtension_Suppressor_Turbo'",
+  // crossbow
+  "SBZWeaponPartSchematic'/Game/Schematics/WeaponParts/Attachments/Crossbow/CrossbowReceiver/Crossbow_CrossbowReceiver_Balanced.Crossbow_CrossbowReceiver_Balanced'",
+  "SBZWeaponPartSchematic'/Game/Schematics/WeaponParts/Attachments/Crossbow/CrossbowReceiver/Crossbow_CrossbowReceiver_Precision.Crossbow_CrossbowReceiver_Precision'",
+  "SBZWeaponPartSchematic'/Game/Schematics/WeaponParts/Attachments/Crossbow/CrossbowReceiver/Crossbow_CrossbowReceiver_Skeletal.Crossbow_CrossbowReceiver_Skeletal'",
+  "SBZWeaponPartSchematic'/Game/Schematics/WeaponParts/Attachments/Crossbow/Riser/Crossbow_Riser_Skeletal.Crossbow_Riser_Skeletal'",
+  "SBZWeaponPartSchematic'/Game/Schematics/WeaponParts/Attachments/Crossbow/Riser/Crossbow_Riser_Solid.Crossbow_Riser_Solid'",
+  "SBZWeaponPartSchematic'/Game/Schematics/WeaponParts/Attachments/Crossbow/Riser/Crossbow_Riser_Weighted.Crossbow_Riser_Weighted'",
+  "SBZWeaponPartSchematic'/Game/Schematics/WeaponParts/Attachments/Crossbow/WheelCam/Balanced/Crossbow_WheelCam_Balanced.Crossbow_WheelCam_Balanced'",
+  "SBZWeaponPartSchematic'/Game/Schematics/WeaponParts/Attachments/Crossbow/WheelCam/Skeletal/Crossbow_WheelCam_Skeletal.Crossbow_WheelCam_Skeletal'",
+  "SBZWeaponPartSchematic'/Game/Schematics/WeaponParts/Attachments/Crossbow/WheelCam/Solid/Crossbow_WheelCam_Solid.Crossbow_WheelCam_Solid'",
+
+  // gadgets
   "SBZWeaponPartSchematic'/Game/Schematics/WeaponParts/Attachments/Gadgets/AssaultLight/SCH_Attachment_Gadget_AssaultLight.SCH_Attachment_Gadget_AssaultLight'",
-  "SBZWeaponPartSchematic'/Game/Schematics/WeaponParts/Attachments/Gadgets/LEDCombo/SCH_Attachment_Gadget_LEDCombo.SCH_Attachment_Gadget_LEDCombo'",
-  "SBZWeaponPartSchematic'/Game/Schematics/WeaponParts/Attachments/Gadgets/AssaultLight/SCH_Attachment_Gadget_AssaultLight.SCH_Attachment_Gadget_AssaultLight'"
+  "SBZWeaponPartSchematic'/Game/Schematics/WeaponParts/Attachments/Gadgets/CompactLaserModule/SCH_Attachment_Gadget_CompactLaserModule.SCH_Attachment_Gadget_CompactLaserModule'",
+  "SBZWeaponPartSchematic'/Game/Schematics/WeaponParts/Attachments/Gadgets/FoxtrotLight/SCH_Attachment_Gadget_FoxtrotLight.SCH_Attachment_Gadget_FoxtrotLight'",
+  "SBZWeaponPartSchematic'/Game/Schematics/WeaponParts/Attachments/Gadgets/InforceLight/SCH_Attachment_Gadget_InforceLight.SCH_Attachment_Gadget_InforceLight'",
+  //"SBZWeaponPartSchematic'/Game/Schematics/WeaponParts/Attachments/Gadgets/LEDCombo/SCH_Attachment_Gadget_LEDCombo.SCH_Attachment_Gadget_LEDCombo'", // not used ingame at all!!
+  "SBZWeaponPartSchematic'/Game/Schematics/WeaponParts/Attachments/Gadgets/Pec15/SCH_Attachment_Gadget_Pec15.SCH_Attachment_Gadget_Pec15'",
+  "SBZWeaponPartSchematic'/Game/Schematics/WeaponParts/Attachments/Gadgets/PocketLaser/SCH_Attachment_Gadget_PocketLaser.SCH_Attachment_Gadget_PocketLaser'",
+  "SBZWeaponPartSchematic'/Game/Schematics/WeaponParts/Attachments/Gadgets/StingrayLaser/SCH_Attachment_Gadget_StingrayLaser.SCH_Attachment_Gadget_StingrayLaser'",
+  "SBZWeaponPartSchematic'/Game/Schematics/WeaponParts/Attachments/Gadgets/TacticalPistolLight/SCH_Attachment_Gadget_TacticalPistolLight.SCH_Attachment_Gadget_TacticalPistolLight'",
+  // mag
+  "SBZWeaponPartSchematic'/Game/Schematics/WeaponParts/Attachments/Mags/Pmag/SCH_Attachment_Mag_Pmag.SCH_Attachment_Mag_Pmag'",
+  "SBZWeaponPartSchematic'/Game/Schematics/WeaponParts/Attachments/Mags/Speedpull/SCH_Attachment_Mag_Speedpull.SCH_Attachment_Mag_Speedpull'",
+  "SBZWeaponPartSchematic'/Game/Schematics/WeaponParts/Attachments/Mags/Troy/SCH_Attachment_Mag_Troy.SCH_Attachment_Mag_Troy'",
+  "SBZWeaponPartSchematic'/Game/Schematics/WeaponParts/Attachments/Mags/Vintage/SCH_Attachment_Mag_Vintage.SCH_Attachment_Mag_Vintage'",
+  // sights
+  "SBZWeaponPartSchematic'/Game/Schematics/WeaponParts/Attachments/Sights/Acog/SCH_Sight_Acog.SCH_Sight_Acog'",
+  "SBZWeaponPartSchematic'/Game/Schematics/WeaponParts/Attachments/Sights/CrossbowScope/SCH_Sight_CrossbowScope.SCH_Sight_CrossbowScope'",
+  "SBZWeaponPartSchematic'/Game/Schematics/WeaponParts/Attachments/Sights/Holographic/SCH_Sight_Holographic.SCH_Sight_Holographic'",
+  "SBZWeaponPartSchematic'/Game/Schematics/WeaponParts/Attachments/Sights/Milspec/SCH_Sight_Milspec.SCH_Sight_Milspec'",
+  "SBZWeaponPartSchematic'/Game/Schematics/WeaponParts/Attachments/Sights/PistolDeltaSight/SCH_Sight_PistolDeltaSight.SCH_Sight_PistolDeltaSight'",
+  "SBZWeaponPartSchematic'/Game/Schematics/WeaponParts/Attachments/Sights/PistolRedDot/SCH_Sight_PistolRedDot.SCH_Sight_PistolRedDot'",
+  "SBZWeaponPartSchematic'/Game/Schematics/WeaponParts/Attachments/Sights/PrecisionScope/SCH_Sight_PrecisionScope.SCH_Sight_PrecisionScope'",
+  "SBZWeaponPartSchematic'/Game/Schematics/WeaponParts/Attachments/Sights/RifleLong10X/SCH_Sight_RifleLong10X.SCH_Sight_RifleLong10X'",
+  "SBZWeaponPartSchematic'/Game/Schematics/WeaponParts/Attachments/Sights/RifleLong6X/SCH_Sight_RifleLong6X.SCH_Sight_RifleLong6X'",
+  "SBZWeaponPartSchematic'/Game/Schematics/WeaponParts/Attachments/Sights/Solar/SCH_Sight_Solar.SCH_Sight_Solar'",
+  "SBZWeaponPartSchematic'/Game/Schematics/WeaponParts/Attachments/Sights/Speculator/SCH_Sight_Speculator.SCH_Sight_Speculator'",
+  "SBZWeaponPartSchematic'/Game/Schematics/WeaponParts/Attachments/Sights/Vintage/SCH_Sight_Vintage.SCH_Sight_Vintage'",
+  // stocks
+  "SBZWeaponPartSchematic'/Game/Schematics/WeaponParts/Attachments/Stocks/FixedStock/SCH_Attachment_Stock_Fixed.SCH_Attachment_Stock_Fixed'",
+  "SBZWeaponPartSchematic'/Game/Schematics/WeaponParts/Attachments/Stocks/FoldingStock/SCH_Attachment_Stock_Folding.SCH_Attachment_Stock_Folding'",
+  "SBZWeaponPartSchematic'/Game/Schematics/WeaponParts/Attachments/Stocks/Tactical/SCH_Attachment_Stock_Tactical.SCH_Attachment_Stock_Tactical'",
+  "SBZWeaponPartSchematic'/Game/Schematics/WeaponParts/Attachments/Stocks/TwoPieceStock/SCH_Attachment_Stock_TwoPiece.SCH_Attachment_Stock_TwoPiece'",
 ]
 // this is probably the worst way to do it but i dont care xd
 function GetWeeklyNPCItems(rng) {
