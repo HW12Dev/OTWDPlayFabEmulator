@@ -217,7 +217,7 @@ const wanderermaps = [
   "/Game/Schematics/Levels/MainQuests/Underground_Escape_Story_01.Underground_Escape_Story_01", // last stop
   "/Game/Schematics/Levels/MainQuests/DeptStore_Assault_Military_01.DeptStore_Assault_Military_01", // doctor's orders
   "/Game/Schematics/Levels/MainQuests/Lincoln_Assault_Story_01.Lincoln_Assault_Story_01" // join or die
-] // s2 missions might work but i wont add them for compatibility with old versions + its how it was left as on the playfab end
+]
 
 const wandererweapons = [
   // assault rifle
@@ -351,8 +351,8 @@ const wandererattachments = [
 // this is probably the worst way to do it but i dont care xd
 function GetWeeklyNPCItems(rng) {
   var itemslist = [];
-  var weaponslist = wandererweapons;
-  var attachmentslist = wandererattachments;
+  var weaponslist = wandererweapons.slice();
+  var attachmentslist = wandererattachments.slice();
 
   for (index = 0; index <= 2; index++) {
     var selectedarray = index == 2 ? attachmentslist : weaponslist;
